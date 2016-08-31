@@ -77,9 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // se guarda el device token generado
         var tokenStr = " "
         
-        // por cada caracter del token que identifica el device le cambiamos el formato para no tener info personal
+        // por cada caracter del token que identifica el device le cambiamos el formato para no tener informacion personal
         for i in 0..<deviceToken.length {
             
+            // this format serializes the device token into a hexadecimal string to avoid saving personal information
             tokenStr += String(format: "%02.2hhx", arguments: [tokenChar[i]])
         }
         
