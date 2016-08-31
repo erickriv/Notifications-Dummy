@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Appearance colors
+        UITabBar.appearance().barTintColor = UIColor.yellowColor()
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        
         return true
     }
 
@@ -40,6 +45,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    // function that prompts user to accept or decline to receive notifications
+    // it'll also be used when the app first launches
+    func registerForNotifications (applications : UIApplication) {
+        
+        // creamos una constante de la configuracion para que sea siempre igual
+        let notificationSettings = UIUserNotificationSettings (forTypes: [.Badge, .Sound, .Alert], categories: nil)
+        
+        applications.registerUserNotificationSettings(notificationSettings)
+        
+    }
+    
+    // function used when the user accepts notifications from the app it'll register for Remote Notifications
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings:
+        UIUserNotificationSettings) {
+        
+            if notificationSettings.types != .None {
+                
+                application.registerForRemoteNotifications()
+            }
+            
+    }
+    
+    // function designed for if the user registered for remote notifications then it generates a device token
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        // creamos una constante del token que recibamos como constant character
+        let tokenChar = UnsafePointer<CChar>(deviceToken.bytes)
+        
+        // se guarda el device token generado
+        var tokenStr = " "
+        
+        // por cada caracter del token que identifica el device le cambiamos el formato para no tener info personal
+        for i in 0..<deviceToken.length {
+            
+            tokenStr += String(format: "%02.2hhx", arguments: [tokenChar[i]])
+        }
+        
+        print("Device Token", tokenStr)
+    }
+    
+    // function unlike the one above, its used when the user didnt signed for remote notifications
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        
+        // the output is an error
+        print("Fail to register: ", error)
+    }
+    
 
 
 }
