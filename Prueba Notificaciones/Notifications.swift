@@ -26,7 +26,7 @@ class Notifications: NSObject {
     var util = Utility()
     var dbConnection : FMDatabase? = nil
     
-    let filters         = []
+    //let filters         = []
     
     
     func getInstance() -> Notifications {
@@ -41,7 +41,7 @@ class Notifications: NSObject {
     }
     
     
-    func save(id: Int){
+    func save(_ id: Int){
         // Recibe el id del mensaje grabado en el diccionario temporero y lo envia a la base de datos
         
         // busco en la tabla el mensaje con este id
@@ -51,10 +51,10 @@ class Notifications: NSObject {
     }
     
     
-    func dismissNotification(indexPath: Int){
+    func dismissNotification(_ indexPath: Int){
         // Esta funcion borrara los mensajes del DataSource
         
-        tempNotifications.removeAtIndex(indexPath)
+        tempNotifications.remove(at: indexPath)
         
         // Tiro query para borrar la notificacion de la base de dato
         
@@ -62,7 +62,7 @@ class Notifications: NSObject {
     }
 
     
-    func findNotification(id: Int ){
+    func findNotification(_ id: Int ){
         
         
     }
@@ -77,21 +77,21 @@ class Notifications: NSObject {
     
     func loadTempNotifications() {
         //Aqui devolvemos un array de las notificaciones que tengo que no se han guardado.
-        notificationsModel.dbConnection?.open()
+        notificationsModel.dbConnection?.open() // is it really open? bitch?
         
         // Cargamos lo que este guardado en la base de datos con el flag de temp
-        let resultSet: FMResultSet! = notificationsModel.dbConnection?.executeQuery("SELECT * FROM notifications WHERE temp_flag = 1", withArgumentsInArray: nil)
+        let resultSet: FMResultSet! = notificationsModel.dbConnection?.executeQuery("SELECT * FROM notifications WHERE temp_flag = 1", withArgumentsIn: nil)
         
         
         if(resultSet != nil){
             // Recorremos todos los resultados, uno por uno vamos llenando los modelos de los mensajes
             while resultSet.next() {
                
-                let temp        = Notifications()
-                temp.id         = Int(resultSet.intForColumn("id"))
-                temp.message    = resultSet.stringForColumn("message")
-                temp.activeFilters = resultSet.stringForColumn("filtros")
-                temp.source     = resultSet.stringForColumn("source_id")
+                let temp            = Notifications()
+                temp.id             = Int(resultSet.int(forColumn: "id"))
+                temp.message        = resultSet.string(forColumn: "message")
+                temp.activeFilters  = resultSet.string(forColumn: "filtros")
+                temp.source         = resultSet.string(forColumn: "source_id")
             
                 // Pegamos el modelo que sacamos de las notificaciones.
                 tempNotifications.append(temp)

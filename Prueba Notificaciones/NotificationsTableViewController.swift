@@ -17,7 +17,7 @@ class NotificationsTableViewController: UITableViewController {
     }
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         notifications.loadTempNotifications() // Hacemos un refresh de la info sacada de la db
@@ -26,18 +26,18 @@ class NotificationsTableViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        selectedNotification = notifications.tempNotifications[indexPath.row]
-        self.performSegueWithIdentifier("notificationsDetailSegue", sender: self)
+        selectedNotification = notifications.tempNotifications[(indexPath as NSIndexPath).row]
+        self.performSegue(withIdentifier: "notificationsDetailSegue", sender: self)
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Funcion: Demostramos la data del cell, dependiendo de su posicion en el SourceData
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("notificationsViewCell", forIndexPath: indexPath) as! NotificationsCell
-        let viewableNotification = notifications.tempNotifications[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationsViewCell", for: indexPath) as! NotificationsCell
+        let viewableNotification = notifications.tempNotifications[(indexPath as NSIndexPath).row]
         
         cell.titleLabel.text = viewableNotification.title
         cell.sourceNameLabel.text = viewableNotification.source
@@ -48,15 +48,15 @@ class NotificationsTableViewController: UITableViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "notificationsDetailSegue"){
             
             // Ahora buscamos la notificacion especifica
-            if let row = tableView.indexPathForSelectedRow?.row {
+            if let row = (tableView.indexPathForSelectedRow as NSIndexPath?)?.row {
                 
                 let notification = notifications.tempNotifications[row]
-                let detailViewController = segue.destinationViewController as! NotificationsDetailViewController
+                let detailViewController = segue.destination as! NotificationsDetailViewController
                 
                 detailViewController.selectedNotification = notification
             }

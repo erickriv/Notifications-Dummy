@@ -28,7 +28,7 @@ class NotificationsDetailViewController: UIViewController {
     }
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         messageField.text = selectedNotification.message

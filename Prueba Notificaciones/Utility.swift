@@ -11,19 +11,19 @@ import UIKit
 //Clase para verificar si la base de datos existe.
 class Utility: NSObject {
     
-    func getPath(fileName: String) -> String {
-        print(NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] + "/" + fileName)
-        return NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] + "/" + fileName
+    func getPath(_ fileName: String) -> String {
+        print(NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/" + fileName)
+        return NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0] + "/" + fileName
     }
     
-    func copyFile(fileName: NSString) {
+    func copyFile(_ fileName: NSString) {
         let dbPath: String = getPath(fileName as String)
-        let fileManager = NSFileManager.defaultManager()
-        if !fileManager.fileExistsAtPath(dbPath) {
-            let fromPath: String? = (NSBundle.mainBundle().resourcePath)! + "/" + (fileName as String)
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: dbPath) {
+            let fromPath: String? = (Bundle.main.resourcePath)! + "/" + (fileName as String)
             var error : NSError?
             do {
-                try fileManager.copyItemAtPath(fromPath!, toPath: dbPath)
+                try fileManager.copyItem(atPath: fromPath!, toPath: dbPath)
             } catch let error1 as NSError {
                 error = error1
             }
@@ -37,7 +37,7 @@ class Utility: NSObject {
                 alert.message = "Your database copy successfully"
             }
             alert.delegate = nil
-            alert.addButtonWithTitle("Ok")
+            alert.addButton(withTitle: "Ok")
             alert.show()
         }
     }

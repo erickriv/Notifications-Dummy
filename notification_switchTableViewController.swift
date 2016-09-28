@@ -14,12 +14,12 @@ class notification_switchTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mySwitch?.addTarget(self, action: #selector(notification_switchTableViewController.switchIsChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        mySwitch?.addTarget(self, action: #selector(notification_switchTableViewController.switchIsChanged(_:)), for: UIControlEvents.valueChanged)
     }
 
 
-    @IBAction func switchIsChanged(mySwitch: UISwitch) {
-        if mySwitch.on {
+    @IBAction func switchIsChanged(_ mySwitch: UISwitch) {
+        if mySwitch.isOn {
             print("UISwitch is ON")
         } else {
             print("UISwitch is OFF")
