@@ -8,13 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		096E466B1D6E716200F10DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E466A1D6E716200F10DA6 /* AppDelegate.swift */; };
-		096E466D1D6E716200F10DA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E466C1D6E716200F10DA6 /* ViewController.swift */; };
+		096E466D1D6E716200F10DA6 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E466C1D6E716200F10DA6 /* FiltersViewController.swift */; };
 		096E46701D6E716200F10DA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096E466E1D6E716200F10DA6 /* Main.storyboard */; };
 		096E46721D6E716200F10DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096E46711D6E716200F10DA6 /* Assets.xcassets */; };
 		096E46751D6E716200F10DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096E46731D6E716200F10DA6 /* LaunchScreen.storyboard */; };
 		096E46801D6E716200F10DA6 /* Prueba_NotificacionesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E467F1D6E716200F10DA6 /* Prueba_NotificacionesTests.swift */; };
 		096E468B1D6E716200F10DA6 /* Prueba_NotificacionesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E468A1D6E716200F10DA6 /* Prueba_NotificacionesUITests.swift */; };
 		096E46991D6E81E700F10DA6 /* notification_switchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E46981D6E81E700F10DA6 /* notification_switchTableViewController.swift */; };
+		7793B4C21D82036200BCADB3 /* RecentNotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793B4C11D82036200BCADB3 /* RecentNotificationsTableViewController.swift */; };
+		7793B4CA1D86FFE200BCADB3 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793B4C91D86FFE200BCADB3 /* Notifications.swift */; };
+		7793B4CC1D86FFF000BCADB3 /* NotificationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793B4CB1D86FFF000BCADB3 /* NotificationsDetailViewController.swift */; };
+		7793B4D01D87000600BCADB3 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793B4CF1D87000600BCADB3 /* NotificationsTableViewController.swift */; };
+		77E3DD2B1D8B05FE003D58FA /* notificationsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD2A1D8B05FE003D58FA /* notificationsViewCell.swift */; };
+		77E3DD2D1D8B0675003D58FA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD2C1D8B0675003D58FA /* Utility.swift */; };
+		77E3DD2F1D8B079D003D58FA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E3DD2E1D8B079D003D58FA /* libsqlite3.0.tbd */; };
+		77E3DD321D8B07F4003D58FA /* WriteToTextFIle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD301D8B07F4003D58FA /* WriteToTextFIle.swift */; };
+		77E3DD331D8B07F4003D58FA /* Mydb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD311D8B07F4003D58FA /* Mydb.swift */; };
+		77E3DD3F1D8B099A003D58FA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD351D8B099A003D58FA /* FMDatabase.m */; };
+		77E3DD401D8B099A003D58FA /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD371D8B099A003D58FA /* FMDatabaseAdditions.m */; };
+		77E3DD411D8B099A003D58FA /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD391D8B099A003D58FA /* FMDatabasePool.m */; };
+		77E3DD421D8B099A003D58FA /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD3B1D8B099A003D58FA /* FMDatabaseQueue.m */; };
+		77E3DD431D8B099A003D58FA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD3E1D8B099A003D58FA /* FMResultSet.m */; };
+		77E3DD461D8B2D8E003D58FA /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD451D8B2D8E003D58FA /* MainScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +52,7 @@
 /* Begin PBXFileReference section */
 		096E46671D6E716200F10DA6 /* Prueba Notificaciones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba Notificaciones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096E466A1D6E716200F10DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		096E466C1D6E716200F10DA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		096E466C1D6E716200F10DA6 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		096E466F1D6E716200F10DA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		096E46711D6E716200F10DA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		096E46741D6E716200F10DA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +63,30 @@
 		096E46861D6E716200F10DA6 /* Prueba NotificacionesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prueba NotificacionesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096E468A1D6E716200F10DA6 /* Prueba_NotificacionesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba_NotificacionesUITests.swift; sourceTree = "<group>"; };
 		096E468C1D6E716200F10DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		096E46981D6E81E700F10DA6 /* notification_switchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notification_switchTableViewController.swift; sourceTree = "<group>"; };
+		096E46981D6E81E700F10DA6 /* notification_switchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = notification_switchTableViewController.swift; path = ../notification_switchTableViewController.swift; sourceTree = "<group>"; };
+		7793B4C11D82036200BCADB3 /* RecentNotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentNotificationsTableViewController.swift; sourceTree = "<group>"; };
+		7793B4C91D86FFE200BCADB3 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		7793B4CB1D86FFF000BCADB3 /* NotificationsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsDetailViewController.swift; sourceTree = "<group>"; };
+		7793B4CF1D87000600BCADB3 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		77E3DD291D89D340003D58FA /* Prueba Notificaciones-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prueba Notificaciones-Bridging-Header.h"; sourceTree = "<group>"; };
+		77E3DD2A1D8B05FE003D58FA /* notificationsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationsViewCell.swift; sourceTree = "<group>"; };
+		77E3DD2C1D8B0675003D58FA /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		77E3DD2E1D8B079D003D58FA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		77E3DD301D8B07F4003D58FA /* WriteToTextFIle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteToTextFIle.swift; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/WriteToTextFIle.swift"; sourceTree = "<group>"; };
+		77E3DD311D8B07F4003D58FA /* Mydb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mydb.swift; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/Mydb.swift"; sourceTree = "<group>"; };
+		77E3DD341D8B099A003D58FA /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabase.h"; sourceTree = "<group>"; };
+		77E3DD351D8B099A003D58FA /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabase.m"; sourceTree = "<group>"; };
+		77E3DD361D8B099A003D58FA /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabaseAdditions.h"; sourceTree = "<group>"; };
+		77E3DD371D8B099A003D58FA /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabaseAdditions.m"; sourceTree = "<group>"; };
+		77E3DD381D8B099A003D58FA /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabasePool.h"; sourceTree = "<group>"; };
+		77E3DD391D8B099A003D58FA /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabasePool.m"; sourceTree = "<group>"; };
+		77E3DD3A1D8B099A003D58FA /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabaseQueue.h"; sourceTree = "<group>"; };
+		77E3DD3B1D8B099A003D58FA /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDatabaseQueue.m"; sourceTree = "<group>"; };
+		77E3DD3C1D8B099A003D58FA /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDB.h"; sourceTree = "<group>"; };
+		77E3DD3D1D8B099A003D58FA /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMResultSet.h"; sourceTree = "<group>"; };
+		77E3DD3E1D8B099A003D58FA /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMResultSet.m"; sourceTree = "<group>"; };
+		77E3DD441D8B145C003D58FA /* asociacionesdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = asociacionesdb.db; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/databases/asociacionesdb.db"; sourceTree = "<group>"; };
+		77E3DD451D8B2D8E003D58FA /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E3DD2F1D8B079D003D58FA /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +118,6 @@
 		096E465E1D6E716100F10DA6 = {
 			isa = PBXGroup;
 			children = (
-				096E46981D6E81E700F10DA6 /* notification_switchTableViewController.swift */,
 				096E46691D6E716200F10DA6 /* Prueba Notificaciones */,
 				096E467E1D6E716200F10DA6 /* Prueba NotificacionesTests */,
 				096E46891D6E716200F10DA6 /* Prueba NotificacionesUITests */,
@@ -100,12 +138,25 @@
 		096E46691D6E716200F10DA6 /* Prueba Notificaciones */ = {
 			isa = PBXGroup;
 			children = (
+				77E3DD281D89D326003D58FA /* FMDB */,
+				7793B4CF1D87000600BCADB3 /* NotificationsTableViewController.swift */,
+				7793B4CB1D86FFF000BCADB3 /* NotificationsDetailViewController.swift */,
+				77E3DD2C1D8B0675003D58FA /* Utility.swift */,
+				77E3DD2A1D8B05FE003D58FA /* notificationsViewCell.swift */,
+				7793B4C91D86FFE200BCADB3 /* Notifications.swift */,
+				096E46981D6E81E700F10DA6 /* notification_switchTableViewController.swift */,
+				77E3DD451D8B2D8E003D58FA /* MainScreenViewController.swift */,
 				096E466A1D6E716200F10DA6 /* AppDelegate.swift */,
-				096E466C1D6E716200F10DA6 /* ViewController.swift */,
+				77E3DD301D8B07F4003D58FA /* WriteToTextFIle.swift */,
+				77E3DD311D8B07F4003D58FA /* Mydb.swift */,
+				096E466C1D6E716200F10DA6 /* FiltersViewController.swift */,
+				7793B4C11D82036200BCADB3 /* RecentNotificationsTableViewController.swift */,
 				096E466E1D6E716200F10DA6 /* Main.storyboard */,
+				77E3DD2E1D8B079D003D58FA /* libsqlite3.0.tbd */,
 				096E46711D6E716200F10DA6 /* Assets.xcassets */,
 				096E46731D6E716200F10DA6 /* LaunchScreen.storyboard */,
 				096E46761D6E716200F10DA6 /* Info.plist */,
+				77E3DD441D8B145C003D58FA /* asociacionesdb.db */,
 			);
 			path = "Prueba Notificaciones";
 			sourceTree = "<group>";
@@ -126,6 +177,25 @@
 				096E468C1D6E716200F10DA6 /* Info.plist */,
 			);
 			path = "Prueba NotificacionesUITests";
+			sourceTree = "<group>";
+		};
+		77E3DD281D89D326003D58FA /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				77E3DD341D8B099A003D58FA /* FMDatabase.h */,
+				77E3DD351D8B099A003D58FA /* FMDatabase.m */,
+				77E3DD361D8B099A003D58FA /* FMDatabaseAdditions.h */,
+				77E3DD371D8B099A003D58FA /* FMDatabaseAdditions.m */,
+				77E3DD381D8B099A003D58FA /* FMDatabasePool.h */,
+				77E3DD391D8B099A003D58FA /* FMDatabasePool.m */,
+				77E3DD3A1D8B099A003D58FA /* FMDatabaseQueue.h */,
+				77E3DD3B1D8B099A003D58FA /* FMDatabaseQueue.m */,
+				77E3DD3C1D8B099A003D58FA /* FMDB.h */,
+				77E3DD3D1D8B099A003D58FA /* FMResultSet.h */,
+				77E3DD3E1D8B099A003D58FA /* FMResultSet.m */,
+				77E3DD291D89D340003D58FA /* Prueba Notificaciones-Bridging-Header.h */,
+			);
+			name = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +329,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				096E466D1D6E716200F10DA6 /* ViewController.swift in Sources */,
+				77E3DD2D1D8B0675003D58FA /* Utility.swift in Sources */,
+				77E3DD461D8B2D8E003D58FA /* MainScreenViewController.swift in Sources */,
+				7793B4CC1D86FFF000BCADB3 /* NotificationsDetailViewController.swift in Sources */,
+				77E3DD3F1D8B099A003D58FA /* FMDatabase.m in Sources */,
+				7793B4CA1D86FFE200BCADB3 /* Notifications.swift in Sources */,
+				7793B4D01D87000600BCADB3 /* NotificationsTableViewController.swift in Sources */,
+				77E3DD401D8B099A003D58FA /* FMDatabaseAdditions.m in Sources */,
+				77E3DD2B1D8B05FE003D58FA /* notificationsViewCell.swift in Sources */,
+				77E3DD411D8B099A003D58FA /* FMDatabasePool.m in Sources */,
+				77E3DD421D8B099A003D58FA /* FMDatabaseQueue.m in Sources */,
+				096E466D1D6E716200F10DA6 /* FiltersViewController.swift in Sources */,
+				7793B4C21D82036200BCADB3 /* RecentNotificationsTableViewController.swift in Sources */,
 				096E466B1D6E716200F10DA6 /* AppDelegate.swift in Sources */,
+				77E3DD431D8B099A003D58FA /* FMResultSet.m in Sources */,
+				77E3DD331D8B07F4003D58FA /* Mydb.swift in Sources */,
+				77E3DD321D8B07F4003D58FA /* WriteToTextFIle.swift in Sources */,
 				096E46991D6E81E700F10DA6 /* notification_switchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,10 +489,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Prueba Notificaciones/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Coding-Geeks-Studios.Prueba-Notificaciones";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Prueba Notificaciones/Prueba Notificaciones-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -416,10 +503,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Prueba Notificaciones/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Coding-Geeks-Studios.Prueba-Notificaciones";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Prueba Notificaciones/Prueba Notificaciones-Bridging-Header.h";
 			};
 			name = Release;
 		};
