@@ -77,29 +77,42 @@ class Notifications: NSObject {
     
     func loadTempNotifications() {
         //Aqui devolvemos un array de las notificaciones que tengo que no se han guardado.
-        notificationsModel.dbConnection?.open() // is it really open? bitch?
+        //notificationsModel.dbConnection?.open() // is it really open? bitch?
         
-        // Cargamos lo que este guardado en la base de datos con el flag de temp
-        let resultSet: FMResultSet! = notificationsModel.dbConnection?.executeQuery("SELECT * FROM notifications WHERE temp_flag = 1", withArgumentsIn: nil)
+        notificationsModel = notificationsModel.getInstance()
+        print(notificationsModel)
         
         
-        if(resultSet != nil){
-            // Recorremos todos los resultados, uno por uno vamos llenando los modelos de los mensajes
-            while resultSet.next() {
-               
-                let temp            = Notifications()
-                temp.id             = Int(resultSet.int(forColumn: "id"))
-                temp.message        = resultSet.string(forColumn: "message")
-                temp.activeFilters  = resultSet.string(forColumn: "filtros")
-                temp.source         = resultSet.string(forColumn: "source_id")
+        if notificationsModel.dbConnection!.open(){
             
-                // Pegamos el modelo que sacamos de las notificaciones.
-                tempNotifications.append(temp)
-                
+            // Cargamos lo que este guardado en la base de datos con el flag de temp
+            let resultSet: FMResultSet! = notificationsModel.dbConnection!.executeQuery("SELECT * FROM notifications", withArgumentsIn: nil)
+            
+            if(resultSet != nil){
+                // Recorremos todos los resultados, uno por uno vamos llenando los modelos de los mensajes
+                while resultSet.next() {
+                    
+                    let temp            = Notifications()
+                    temp.id             = Int(resultSet.int(forColumn: "id"))
+                    temp.message        = resultSet.string(forColumn: "message")
+                    temp.activeFilters  = resultSet.string(forColumn: "filtros")
+                    temp.source         = resultSet.string(forColumn: "source_id")
+                    
+                    // Pegamos el modelo que sacamos de las notificaciones.
+                    tempNotifications.append(temp)
+                    
+                    print(temp)
+                }
+            }else{
+                print("Problema cargando los resultados del query a la base de datos (TempNotifications)\n\n TOTO")
             }
-        }else{
-            print("Problema cargando los resultados del query a la base de datos (TempNotifications)\n\n TOTO")
+            
+        }else {
+            
+            print("No fucking carga esta puta mierda de base de datos.")
+            
         }
+        
     
         notificationsModel.dbConnection?.close()
 

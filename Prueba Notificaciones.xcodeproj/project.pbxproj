@@ -30,6 +30,7 @@
 		77E3DD421D8B099A003D58FA /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD3B1D8B099A003D58FA /* FMDatabaseQueue.m */; };
 		77E3DD431D8B099A003D58FA /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD3E1D8B099A003D58FA /* FMResultSet.m */; };
 		77E3DD461D8B2D8E003D58FA /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD451D8B2D8E003D58FA /* MainScreenViewController.swift */; };
+		EA507A4A1D9DB704006EB4AB /* asociacionesdb.db in Resources */ = {isa = PBXBuildFile; fileRef = EA507A491D9DB704006EB4AB /* asociacionesdb.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +86,8 @@
 		77E3DD3C1D8B099A003D58FA /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMDB.h"; sourceTree = "<group>"; };
 		77E3DD3D1D8B099A003D58FA /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMResultSet.h"; sourceTree = "<group>"; };
 		77E3DD3E1D8B099A003D58FA /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/FMResultSet.m"; sourceTree = "<group>"; };
-		77E3DD441D8B145C003D58FA /* asociacionesdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = asociacionesdb.db; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/databases/asociacionesdb.db"; sourceTree = "<group>"; };
 		77E3DD451D8B2D8E003D58FA /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		EA507A491D9DB704006EB4AB /* asociacionesdb.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = asociacionesdb.db; path = ../../../Downloads/asociacionesdb.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +156,8 @@
 				77E3DD2E1D8B079D003D58FA /* libsqlite3.0.tbd */,
 				096E46711D6E716200F10DA6 /* Assets.xcassets */,
 				096E46731D6E716200F10DA6 /* LaunchScreen.storyboard */,
+				EA507A491D9DB704006EB4AB /* asociacionesdb.db */,
 				096E46761D6E716200F10DA6 /* Info.plist */,
-				77E3DD441D8B145C003D58FA /* asociacionesdb.db */,
 			);
 			path = "Prueba Notificaciones";
 			sourceTree = "<group>";
@@ -305,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA507A4A1D9DB704006EB4AB /* asociacionesdb.db in Resources */,
 				096E46751D6E716200F10DA6 /* LaunchScreen.storyboard in Resources */,
 				096E46721D6E716200F10DA6 /* Assets.xcassets in Resources */,
 				096E46701D6E716200F10DA6 /* Main.storyboard in Resources */,
