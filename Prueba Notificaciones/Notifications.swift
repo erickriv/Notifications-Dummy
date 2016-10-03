@@ -19,12 +19,13 @@ class Notifications: NSObject {
     var id              = Int()
     var title           = String()
     var message         = String()
-    var source          = String()
+    var sourceName          = String()
+    var personaEncargada = String()
     var activeFilters   = String()
     
     //
     var util = Utility()
-    var dbConnection : FMDatabase? = nil
+    var dbConnection : FMDatabase! = nil
     
     //let filters         = []
     
@@ -90,21 +91,26 @@ class Notifications: NSObject {
             
             if(resultSet != nil){
                 // Recorremos todos los resultados, uno por uno vamos llenando los modelos de los mensajes
-                while resultSet.next() {
+                while resultSet.next(){
                     
                     let temp            = Notifications()
-                    temp.id             = Int(resultSet.int(forColumn: "id"))
-                    temp.message        = resultSet.string(forColumn: "message")
-                    temp.activeFilters  = resultSet.string(forColumn: "filtros")
-                    temp.source         = resultSet.string(forColumn: "source_id")
+                    temp.id             = Int((resultSet?.int(forColumn: "id"))!)
+                    temp.message        = (resultSet?.string(forColumn: "message"))!
+                    // temp.activeFilters  = (resultSet?.string(forColumn: "filtros"))!
+                    temp.personaEncargada = (resultSet?.string(forColumn: "persona_encargada_id"))!
+                    temp.sourceName       = (resultSet?.string(forColumn: "source_name"))!
                     
                     // Pegamos el modelo que sacamos de las notificaciones.
                     tempNotifications.append(temp)
                     
-                    print(temp)
+                    print(temp.message)
+                    print("\n")
+                    print(temp.personaEncargada)
+                    print(temp.sourceName)
+                    
                 }
             }else{
-                print("Problema cargando los resultados del query a la base de datos (TempNotifications)\n\n TOTO")
+                print("Resultset está devolviendo nil\n")
             }
             
         }else {

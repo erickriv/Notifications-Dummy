@@ -40,7 +40,7 @@ class NotificationsTableViewController: UITableViewController {
         let viewableNotification = notifications.tempNotifications[(indexPath as NSIndexPath).row]
         
         cell.titleLabel.text = viewableNotification.title
-        cell.sourceNameLabel.text = viewableNotification.source
+        cell.sourceNameLabel.text = viewableNotification.sourceName
         
         
         return cell
