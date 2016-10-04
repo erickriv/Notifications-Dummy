@@ -8,6 +8,9 @@ class NotificationsTableViewController: UITableViewController {
     let notifications = Notifications()
     var selectedNotification = Notifications()
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +24,8 @@ class NotificationsTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         notifications.loadTempNotifications() // Hacemos un refresh de la info sacada de la db
+        print("Cantidad de notificaciones:\n")
+        print(notifications.tempNotifications.count)
         tableView.reloadData() // Se haga refresh de la data que se presenta en la tablas
         
     }
@@ -48,6 +53,11 @@ class NotificationsTableViewController: UITableViewController {
     }
     
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return notifications.tempNotifications.count
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "notificationsDetailSegue"){
@@ -62,7 +72,15 @@ class NotificationsTableViewController: UITableViewController {
             }
         }
     }
-     
+    
+    
+    override func didReceiveMemoryWarning() {
+        
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
 }
 
 
