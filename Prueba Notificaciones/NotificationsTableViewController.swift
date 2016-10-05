@@ -14,6 +14,7 @@ class NotificationsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65 // Por ahora, no se pq exactamente uso esto en todos los proyectos
         
@@ -41,12 +42,15 @@ class NotificationsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Funcion: Demostramos la data del cell, dependiendo de su posicion en el SourceData
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationsViewCell", for: indexPath) as! NotificationsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationsCell", for: indexPath) as! NotificationsCell
         let viewableNotification = notifications.tempNotifications[(indexPath as NSIndexPath).row]
         
         cell.titleLabel.text = viewableNotification.title
         cell.sourceNameLabel.text = viewableNotification.sourceName
         
+        print("Verificando el cell: \n")
+        print(cell.titleLabel.text)
+        print(cell.sourceNameLabel.text)
         
         return cell
         

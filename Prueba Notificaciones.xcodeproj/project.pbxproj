@@ -19,7 +19,7 @@
 		7793B4CA1D86FFE200BCADB3 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793B4C91D86FFE200BCADB3 /* Notifications.swift */; };
 		7793B4CC1D86FFF000BCADB3 /* NotificationsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793B4CB1D86FFF000BCADB3 /* NotificationsDetailViewController.swift */; };
 		7793B4D01D87000600BCADB3 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7793B4CF1D87000600BCADB3 /* NotificationsTableViewController.swift */; };
-		77E3DD2B1D8B05FE003D58FA /* notificationsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD2A1D8B05FE003D58FA /* notificationsViewCell.swift */; };
+		77E3DD2B1D8B05FE003D58FA /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD2A1D8B05FE003D58FA /* NotificationsCell.swift */; };
 		77E3DD2D1D8B0675003D58FA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD2C1D8B0675003D58FA /* Utility.swift */; };
 		77E3DD2F1D8B079D003D58FA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E3DD2E1D8B079D003D58FA /* libsqlite3.0.tbd */; };
 		77E3DD321D8B07F4003D58FA /* WriteToTextFIle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E3DD301D8B07F4003D58FA /* WriteToTextFIle.swift */; };
@@ -70,7 +70,7 @@
 		7793B4CB1D86FFF000BCADB3 /* NotificationsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsDetailViewController.swift; sourceTree = "<group>"; };
 		7793B4CF1D87000600BCADB3 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		77E3DD291D89D340003D58FA /* Prueba Notificaciones-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prueba Notificaciones-Bridging-Header.h"; sourceTree = "<group>"; };
-		77E3DD2A1D8B05FE003D58FA /* notificationsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationsViewCell.swift; sourceTree = "<group>"; };
+		77E3DD2A1D8B05FE003D58FA /* NotificationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
 		77E3DD2C1D8B0675003D58FA /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		77E3DD2E1D8B079D003D58FA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		77E3DD301D8B07F4003D58FA /* WriteToTextFIle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WriteToTextFIle.swift; path = "../../CAM-UPRA-iOS/P. Lobo iPad-iPhone Last Version/Pregunta Lobo First Prototype/WriteToTextFIle.swift"; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				7793B4CF1D87000600BCADB3 /* NotificationsTableViewController.swift */,
 				7793B4CB1D86FFF000BCADB3 /* NotificationsDetailViewController.swift */,
 				77E3DD2C1D8B0675003D58FA /* Utility.swift */,
-				77E3DD2A1D8B05FE003D58FA /* notificationsViewCell.swift */,
+				77E3DD2A1D8B05FE003D58FA /* NotificationsCell.swift */,
 				7793B4C91D86FFE200BCADB3 /* Notifications.swift */,
 				096E46981D6E81E700F10DA6 /* notification_switchTableViewController.swift */,
 				77E3DD451D8B2D8E003D58FA /* MainScreenViewController.swift */,
@@ -341,7 +341,7 @@
 				7793B4CA1D86FFE200BCADB3 /* Notifications.swift in Sources */,
 				7793B4D01D87000600BCADB3 /* NotificationsTableViewController.swift in Sources */,
 				77E3DD401D8B099A003D58FA /* FMDatabaseAdditions.m in Sources */,
-				77E3DD2B1D8B05FE003D58FA /* notificationsViewCell.swift in Sources */,
+				77E3DD2B1D8B05FE003D58FA /* NotificationsCell.swift in Sources */,
 				77E3DD411D8B099A003D58FA /* FMDatabasePool.m in Sources */,
 				77E3DD421D8B099A003D58FA /* FMDatabaseQueue.m in Sources */,
 				096E466D1D6E716200F10DA6 /* FiltersViewController.swift in Sources */,
