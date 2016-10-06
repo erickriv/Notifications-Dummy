@@ -27,7 +27,7 @@ class NotificationsTableViewController: UITableViewController {
         notifications.loadTempNotifications() // Hacemos un refresh de la info sacada de la db
         print("Cantidad de notificaciones:\n")
         print(notifications.tempNotifications.count)
-        tableView.reloadData() // Se haga refresh de la data que se presenta en la tablas
+        //tableView.reloadData() // Se haga refresh de la data que se presenta en la tablas
         
     }
     
@@ -73,6 +73,7 @@ class NotificationsTableViewController: UITableViewController {
                 let detailViewController = segue.destination as! NotificationsDetailViewController
                 
                 detailViewController.selectedNotification = notification
+                
             }
         }
     }

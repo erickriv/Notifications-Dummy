@@ -34,7 +34,7 @@ class NotificationsDetailViewController: UIViewController {
         messageField.text = selectedNotification.message
         titleLabel.text   = selectedNotification.title
         sourceLabel.text  = selectedNotification.sourceName
-        personaEncargadaLabel.text = selectedNotification.sourceName
+       // personaEncargadaLabel.text = selectedNotification.personaEncargada
         
         // Podemos poner mas informacion si es de quererse.
         

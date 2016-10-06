@@ -16,12 +16,12 @@ class Notifications: NSObject {
     
     var tempNotifications   = [Notifications]() // Por ahora grabaremos las notificaciones aqui antes de que el usuario
                                                 // decida grabarlos deverdad.
-    var id              = Int()
-    var title           = String()
-    var message         = String()
+    var id                  = Int()
+    var title               = String()
+    var message             = String()
     var sourceName          = String()
-    var personaEncargada = String()
-    var activeFilters   = String()
+    var personaEncargada    = String()
+    var activeFilters       = String()
     
     //
     var util = Utility()

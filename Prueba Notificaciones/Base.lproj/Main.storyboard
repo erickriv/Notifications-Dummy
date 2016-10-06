@@ -119,7 +119,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4U4-xq-ZNv">
-                                <frame key="frameInset" minX="139" minY="232" width="104" height="30"/>
+                                <frame key="frameInset" minX="16" minY="232" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -144,13 +144,12 @@
                     <connections>
                         <outlet property="messageField" destination="4U4-xq-ZNv" id="h1P-9e-8G1"/>
                         <outlet property="sourceLabel" destination="2a7-Pu-Icv" id="2GD-Zx-Xsu"/>
-                        <outlet property="titleField" destination="mJx-bL-KgM" id="brX-Sc-OZS"/>
                         <outlet property="titleLabel" destination="mJx-bL-KgM" id="kKc-K7-gHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QO1-gP-IFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="1033"/>
+            <point key="canvasLocation" x="1584.8" y="1032.2338830584708"/>
         </scene>
         <!--Notification switch Table View Controller-->
         <scene sceneID="dPp-3j-acX">
