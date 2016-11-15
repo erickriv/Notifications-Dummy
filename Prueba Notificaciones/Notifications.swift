@@ -108,6 +108,8 @@ class Notifications: NSObject {
                     print(temp.personaEncargada)
                     print(temp.sourceName)
                     
+                    // Cuando le de back en la parte de las notificaciones, se TIENE que borrar el array con las notificaciones every time
+                    // Ensuring that the information is fresh every time
                 }
             }else{
                 print("Resultset está devolviendo nil\n")

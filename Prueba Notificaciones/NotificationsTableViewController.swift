@@ -1,5 +1,3 @@
-
-
 import Foundation
 import UIKit
 
@@ -28,6 +26,14 @@ class NotificationsTableViewController: UITableViewController {
         print("Cantidad de notificaciones:\n")
         print(notifications.tempNotifications.count)
         //tableView.reloadData() // Se haga refresh de la data que se presenta en la tablas
+        
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Limpiamos la data dentro del array de notificaciones para eliminar redundancia de data al volver a entrar
         
     }
     
