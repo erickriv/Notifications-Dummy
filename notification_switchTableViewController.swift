@@ -20,7 +20,7 @@ class notification_switchTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //mySwitch?.addTarget(self, action: #selector(notification_switchTableViewController.switchIsChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        mySwitch?.addTarget(self, action: #selector(notification_switchTableViewController.switchIsChanged(_:)), for: UIControlEvents.valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,36 +29,51 @@ class notification_switchTableViewController: UITableViewController {
         
     }
     
-    override func tableView (_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return switches.count
+        return 1
     }
     
-    override func tableView (_ tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 3
+    }*/
+    
+    override func tableView (_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
         
-        cell.textLabel!.text = switches[indexPath.row]
+        cell.textLabel!.text = switches[(indexPath as NSIndexPath).row]
         
         // sets font style and size to respective devices (phone or pad)
         
-        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone) {
             cell.textLabel!.font = UIFont(name: "Arial", size: 19)
         }
         
-        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad) {
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
             cell.textLabel!.font = UIFont(name: "Arial", size: 25)
         }
+        
+        //tableView.reloadData()
         return cell
         
     }
 
-    @IBAction func switchIsChanged(mySwitch: UISwitch) {
+    @IBAction func switchIsChanged(_ mySwitch: UISwitch) {
         
-        if mySwitch.on {
+        if mySwitch.isOn {
+            
+            //subscribe to selected topic
             print("UISwitch is ON")
+            
+            //FIRMessaging.messaging().subscribe(toTopic: "/topics/\(switches.row)")
+            
         } else {
+            
+            //unsubscribe to topic
             print("UISwitch is OFF")
+            //FIRMessaging.messaging().unsubscribe(toTopic: "/topics/\(switches.row)")
         }
         
     }
